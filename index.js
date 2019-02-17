@@ -1,6 +1,7 @@
 // import packages that we need (and have installed) from the package.json
 const express = require('express');
 const bodyParser = require('body-parser');
+const testRoutes = require('./routes/test_routes');
 
 // here we're initalizing the express app
 const app = express();
@@ -16,7 +17,7 @@ app.set('port', port);
 app.use(bodyParser.json());
 
 // add routes
-
+testRoutes(app);
 
 // run the server
 app.listen(port, () => {
